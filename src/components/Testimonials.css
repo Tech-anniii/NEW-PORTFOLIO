@@ -103,17 +103,146 @@
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .testimonials-section {
     padding: 60px 5%;
   }
 
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
 
   .testimonial-card {
     padding: 2rem;
+  }
+
+  .quote-icon {
+    font-size: 3rem;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .author-avatar {
+    width: 55px;
+    height: 55px;
+    font-size: 1.1rem;
+  }
+
+  .author-info h4 {
+    font-size: 1rem;
+  }
+
+  .author-info p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 50px 5%;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .quote-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .rating {
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-author {
+    gap: 0.8rem;
+    padding-top: 1rem;
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .author-info h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .author-info p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 40px 4%;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .testimonials-grid {
+    gap: 1.2rem;
+  }
+
+  .testimonial-card {
+    padding: 1rem;
+  }
+
+  .quote-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+
+  .star {
+    font-size: 1rem;
+  }
+
+  .rating {
+    margin-bottom: 0.8rem;
+    gap: 0.2rem;
+  }
+
+  .testimonial-author {
+    gap: 0.6rem;
+    padding-top: 0.8rem;
+  }
+
+  .author-avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .author-info h4 {
+    font-size: 0.85rem;
+  }
+
+  .author-info p {
+    font-size: 0.75rem;
   }
 }

@@ -134,25 +134,149 @@
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .personal-section {
     padding: 60px 5%;
   }
 
   .interests-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
 
-  .personal-message {
+  .interest-card {
     padding: 2rem;
   }
 
+  .interest-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .interest-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .interest-image {
+    height: 220px;
+    margin-top: 1rem;
+  }
+
+  .personal-message {
+    padding: 2.5rem;
+    margin-top: 3rem;
+  }
+
   .personal-message h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .personal-section {
+    padding: 50px 5%;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .interest-card {
+    padding: 1.5rem;
   }
 
   .interest-icon {
     font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .interest-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .interest-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .interest-image {
+    height: 200px;
+    margin-top: 1rem;
+  }
+
+  .personal-message {
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .personal-message h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .personal-message p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-section {
+    padding: 40px 4%;
+  }
+
+  .interests-grid {
+    gap: 1.2rem;
+  }
+
+  .interest-card {
+    padding: 1rem;
+  }
+
+  .interest-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .interest-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .interest-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .interest-image {
+    height: 150px;
+    margin-top: 0.8rem;
+  }
+
+  .personal-message {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .personal-message h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .personal-message p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
   }
 }

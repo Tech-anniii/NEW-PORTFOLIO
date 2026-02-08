@@ -193,3 +193,88 @@
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 4%;
+  }
+
+  .navbar.scrolled {
+    padding: 0.6rem 4%;
+  }
+
+  .nav-container {
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    width: 280px;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-links li a {
+    padding: 0.6rem 0;
+    font-size: 1rem;
+  }
+
+  .hire-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.6rem 3%;
+  }
+
+  .navbar.scrolled {
+    padding: 0.5rem 3%;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo-dot {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  .nav-links {
+    top: 60px;
+    width: 100vw;
+    right: -100vw;
+    height: calc(100vh - 60px);
+    border-left: none;
+    gap: 0.8rem;
+  }
+
+  .nav-links li a {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .nav-cta {
+    margin-top: 1rem;
+  }
+
+  .hire-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

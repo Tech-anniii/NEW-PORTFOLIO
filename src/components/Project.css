@@ -152,7 +152,7 @@
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .portfolio {
     padding: 60px 5%;
   }
@@ -162,7 +162,7 @@
   }
 
   .portfolio-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
 
@@ -171,8 +171,82 @@
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 50px 5%;
+  }
+
+  .portfolio .heading {
+    font-size: 2rem;
+  }
+
+  .portfolio .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .portfolio-image {
+    height: 200px;
+  }
+
+  .portfolio-layer {
+    padding: 1.5rem;
+  }
+
   .portfolio-layer h4 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 0.9rem;
+  }
+
+  .project-link {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 40px 4%;
+  }
+
+  .portfolio .heading {
+    font-size: 1.6rem;
+  }
+
+  .portfolio .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-container {
+    gap: 1.2rem;
+  }
+
+  .portfolio-image {
+    height: 180px;
+  }
+
+  .portfolio-layer {
+    padding: 1rem;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 1rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .project-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 }

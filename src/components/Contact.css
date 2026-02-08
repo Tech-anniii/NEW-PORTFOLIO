@@ -181,16 +181,180 @@
 }
 
 @media (max-width: 968px) {
+  .contact-section {
+    padding: 60px 5%;
+  }
+
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .info-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .info-text h4 {
+    font-size: 1rem;
+  }
+
+  .info-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
   .contact-section {
-    padding: 60px 5%;
+    padding: 50px 5%;
+  }
+
+  .contact-content {
+    gap: 1.5rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-info > p {
+    font-size: 0.95rem;
   }
 
   .contact-form {
-    padding: 2rem;
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    font-size: 16px;
+  }
+
+  .form-group textarea {
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .social-icons {
+    gap: 0.8rem;
+  }
+
+  .social-icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 40px 4%;
+  }
+
+  .contact-container {
+    padding: 0;
+  }
+
+  .contact-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info > p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .info-cards {
+    gap: 1rem;
+  }
+
+  .info-card {
+    padding: 0.8rem;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .info-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .info-text h4 {
+    font-size: 0.9rem;
+  }
+
+  .info-text p {
+    font-size: 0.85rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 16px;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+
+  .submit-btn {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+    gap: 0.3rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .social-connect h4 {
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    gap: 0.6rem;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 }
