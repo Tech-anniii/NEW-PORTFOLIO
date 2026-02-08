@@ -1,0 +1,158 @@
+.personal-section {
+  padding: 100px 10%;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.personal-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.personal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.interest-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.interest-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(120, 119, 198, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.interest-card:hover {
+  border-color: #00d4ff;
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.3);
+}
+
+.interest-card:hover::before {
+  opacity: 1;
+}
+
+.interest-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.interest-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.interest-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.interest-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.interest-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.interest-card:hover .interest-image img {
+  transform: scale(1.1);
+}
+
+.personal-message {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(120, 119, 198, 0.1) 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.personal-message h3 {
+  font-size: 2rem;
+  color: #00d4ff;
+  margin-bottom: 1.5rem;
+}
+
+.personal-message p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .personal-section {
+    padding: 60px 5%;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .personal-message {
+    padding: 2rem;
+  }
+
+  .personal-message h3 {
+    font-size: 1.5rem;
+  }
+
+  .interest-icon {
+    font-size: 3rem;
+  }
+}
