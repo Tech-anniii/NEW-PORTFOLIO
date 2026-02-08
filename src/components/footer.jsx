@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaHeart } from 'react-icons/fa';
 import { SiLeetcode } from "react-icons/si";
 
-import './footer.css';
+import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
