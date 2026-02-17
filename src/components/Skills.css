@@ -2,7 +2,7 @@
 
 .skills {
   padding: 100px 10%;
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
   position: relative;
 }
 
@@ -13,20 +13,20 @@
 
 .skills h1 {
   font-size: 3rem;
-  color: #fff;
+  color: var(--text);
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .skills h1 span {
-  background: linear-gradient(45deg, #00d4ff, #7877c6);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .skills .section-subtitle {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-soft);
   font-size: 1.1rem;
   margin-top: 1rem;
 }
@@ -41,9 +41,9 @@
 
 .skill-card {
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface);
   border-radius: 20px;
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -56,7 +56,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(120, 119, 198, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.1) 0%, rgba(var(--accent-2-rgb), 0.1) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -72,27 +72,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 .skill-card:hover .skill-icon-wrapper {
   transform: rotateY(360deg);
-  background: rgba(0, 212, 255, 0.2);
+  background: rgba(var(--accent-rgb), 0.2);
 }
 
 .skill-card img {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  filter: drop-shadow(0 5px 15px rgba(0, 212, 255, 0.3));
+  filter: drop-shadow(0 5px 15px rgba(var(--accent-rgb), 0.3));
 }
 
 .skill-card h2 {
   text-align: center;
   font-size: 1.3rem;
-  color: #fff;
+  color: var(--text);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -100,7 +100,7 @@
 .skill-progress {
   width: 100%;
   height: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-strong);
   border-radius: 10px;
   overflow: hidden;
   margin-top: 1rem;
@@ -108,7 +108,7 @@
 
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #00d4ff, #7877c6);
+  background: var(--accent-gradient-90);
   border-radius: 10px;
   position: relative;
   display: flex;
@@ -117,7 +117,7 @@
 }
 
 .progress-label {
-  color: #fff;
+  color: var(--text);
   font-size: 0.75rem;
   font-weight: 600;
   padding-right: 8px;

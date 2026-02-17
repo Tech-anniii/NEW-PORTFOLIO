@@ -1,6 +1,6 @@
 .testimonials-section {
   padding: 100px 10%;
-  background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0a 100%);
+  background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   left: -100px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(120, 119, 198, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(var(--accent-2-rgb), 0.1) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -31,28 +31,28 @@
 }
 
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface);
   padding: 2.5rem;
   border-radius: 20px;
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   position: relative;
   transition: all 0.3s ease;
 }
 
 .testimonial-card:hover {
-  border-color: #00d4ff;
+  border-color: var(--accent);
 }
 
 .quote-icon {
   font-size: 4rem;
-  color: rgba(0, 212, 255, 0.2);
+  color: rgba(var(--accent-rgb), 0.2);
   line-height: 0;
   margin-bottom: 1rem;
   font-family: Georgia, serif;
 }
 
 .testimonial-text {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
@@ -75,31 +75,31 @@
   align-items: center;
   gap: 1rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border);
 }
 
 .author-avatar {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #00d4ff, #7877c6);
+  background: var(--accent-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   font-size: 1.2rem;
   flex-shrink: 0;
 }
 
 .author-info h4 {
-  color: #fff;
+  color: var(--text);
   margin-bottom: 0.3rem;
   font-size: 1.1rem;
 }
 
 .author-info p {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-soft);
   font-size: 0.9rem;
 }
 

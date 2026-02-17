@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ theme = 'dark', onToggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -106,13 +106,46 @@ const Navbar = () => {
           </motion.li>
         </ul>
 
-        <div
-          className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className="nav-actions">
+          <button
+            className="theme-toggle"
+            onClick={onToggleTheme}
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+          >
+            <span className="theme-toggle-icon" aria-hidden="true">
+              {theme === 'dark' ? (
+                <svg viewBox="0 0 24 24" role="presentation">
+                  <circle cx="12" cy="12" r="4" fill="currentColor" />
+                  <path
+                    d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 24 24" role="presentation">
+                  <path
+                    d="M21 15.5A9 9 0 1 1 8.5 3a7 7 0 1 0 12.5 12.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              )}
+            </span>
+            <span className="theme-toggle-text">
+              {theme === 'dark' ? 'Light' : 'Dark'}
+            </span>
+          </button>
+
+          <div
+            className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </motion.nav>

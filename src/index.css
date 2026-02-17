@@ -11,9 +11,31 @@
   line-height: 1.6;
   font-weight: 400;
 
+  --bg: #0a0a0a;
+  --bg-rgb: 10, 10, 10;
+  --bg-alt: #1a1a2e;
+  --bg-soft: #0f0f1e;
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.8);
+  --text-soft: rgba(255, 255, 255, 0.6);
+  --text-faint: rgba(255, 255, 255, 0.4);
+  --text-weak: rgba(255, 255, 255, 0.3);
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #00d4ff;
+  --accent-2: #7877c6;
+  --accent-rgb: 0, 212, 255;
+  --accent-2-rgb: 120, 119, 198;
+  --accent-gradient: linear-gradient(45deg, var(--accent), var(--accent-2));
+  --accent-gradient-90: linear-gradient(90deg, var(--accent), var(--accent-2));
+  --accent-gradient-180: linear-gradient(180deg, var(--accent), var(--accent-2));
+  --accent-gradient-180-rev: linear-gradient(180deg, var(--accent-2), var(--accent));
+  --accent-gradient-225: linear-gradient(225deg, var(--accent), var(--accent-2));
+
   color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0a0a0a;
+  color: var(--text);
+  background-color: var(--bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,11 +43,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme="light"] {
+  --bg: #f6f7fb;
+  --bg-rgb: 246, 247, 251;
+  --bg-alt: #e7e9f3;
+  --bg-soft: #dfe3f0;
+  --text: #0c1220;
+  --text-muted: rgba(12, 18, 32, 0.78);
+  --text-soft: rgba(12, 18, 32, 0.6);
+  --text-faint: rgba(12, 18, 32, 0.45);
+  --text-weak: rgba(12, 18, 32, 0.3);
+  --surface: rgba(12, 18, 32, 0.05);
+  --surface-strong: rgba(12, 18, 32, 0.1);
+  --border: rgba(12, 18, 32, 0.18);
+  --accent: #0b5fff;
+  --accent-2: #23b3a4;
+  --accent-rgb: 11, 95, 255;
+  --accent-2-rgb: 35, 179, 164;
+  color-scheme: light;
+}
+
+.theme-transition,
+.theme-transition * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, fill 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-transition,
+  .theme-transition * {
+    transition: none !important;
+  }
+}
+
 body {
   margin: 0;
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
 }
 
 #root {

@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
   padding: 60px 10% 30px;
   position: relative;
   overflow: hidden;
@@ -12,7 +12,7 @@
   transform: translateX(-50%);
   width: 600px;
   height: 200px;
-  background: radial-gradient(ellipse, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(var(--accent-rgb), 0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -28,30 +28,30 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border);
 }
 
 .footer-section h3,
 .footer-section h4 {
-  color: #fff;
+  color: var(--text);
   margin-bottom: 1.5rem;
 }
 
 .footer-logo {
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(45deg, #00d4ff, #7877c6);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .footer-logo span {
-  color: #00d4ff;
+  color: var(--accent);
 }
 
 .footer-section p {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-soft);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -67,18 +67,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface);
   border-radius: 50%;
-  color: #fff;
+  color: var(--text);
   font-size: 1.3rem;
-  border: 2px solid rgba(0, 212, 255, 0.2);
+  border: 2px solid rgba(var(--accent-rgb), 0.2);
   transition: all 0.3s ease;
 }
 
 .footer-social a:hover {
-  background: linear-gradient(45deg, #00d4ff, #7877c6);
-  border-color: #00d4ff;
-  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+  background: var(--accent-gradient);
+  border-color: var(--accent);
+  box-shadow: 0 5px 20px rgba(var(--accent-rgb), 0.4);
 }
 
 .footer-section ul {
@@ -87,13 +87,13 @@
 
 .footer-section ul li {
   margin-bottom: 0.8rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-soft);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .footer-section ul li:hover {
-  color: #00d4ff;
+  color: var(--accent);
   padding-left: 5px;
 }
 
@@ -105,7 +105,7 @@
 .footer-bottom {
   padding-top: 2rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-faint);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
