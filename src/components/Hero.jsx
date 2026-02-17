@@ -102,31 +102,28 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ delay: 0.5, duration: 0.8 }}
-  className="relative flex items-center justify-center w-[400px] h-[480px] sm:w-[450px] sm:h-[520px]"
->
-  {/* Glow */}
-  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 to-blue-500 blur-3xl opacity-40" />
-
-  {/* Blob Image */}
-  <motion.div
-    animate={{ y: [0, -12, 0] }}
-    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-    className="relative w-[360px] h-[420px] sm:w-[400px] sm:h-[460px] overflow-hidden"
-    style={{
-      clipPath:
-        "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-    }}
-  >
-    <img
-      src="/images/profile3.png"
-      alt="Aniket Singh"
-      className="w-full h-full object-cover"
-    />
-  </motion.div>
-</motion.div>
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="hero-image"
+      >
+        <div className="image-glow" aria-hidden="true" />
+        <motion.div
+          animate={{ y: [0, -12, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="hero-img-wrapper"
+          style={{
+            clipPath:
+              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+          }}
+        >
+          <img
+            src="/images/profile3.jpeg"
+            alt="Aniket Singh"
+            className="hero-profile-img"
+          />
+        </motion.div>
+      </motion.div>
 
 
       <div className="scroll-indicator">
